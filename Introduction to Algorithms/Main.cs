@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Introduction_to_Algorithms
 {
-    class Class1
+    class IntroductionToAlgorithms
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
 
         }
