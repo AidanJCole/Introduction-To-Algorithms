@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace Introduction_to_Algorithms
 {
-    class Sorts
+    public class Sorts
     {
 
-        static void InsertionSort(IComparable[] list)
+        public static IList<T> InsertionSort<T>(IList<T> list) where T : IComparable<T>
         {
-            for (int j = 1 ; j < list.Length; j++)
+            for (int j = 1 ; j < list.Count; j++)
             {
-                IComparable key = list[j];
+                T key = list[j];
                 int i = j - 1;
                 while (i >= 0 && list[i].CompareTo(key) > 0)
                 {
@@ -22,6 +22,7 @@ namespace Introduction_to_Algorithms
                 }
                 list[i + 1] = key;
             }
+            return list;
         }
 
     }
